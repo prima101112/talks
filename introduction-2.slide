@@ -1,0 +1,50 @@
+Introduction to API and go code
+pengenalan API dan kode golang
+28 Aug 2017
+
+Prima Adi
+Gopher
+prima101112@gmail.com
+http://primaadi.net
+
+* API (Application Programming Interface)
+.image images/header.png 50 1000
+is a set of subroutine definitions, protocols, and tools for building application software. In general terms, it is a set of clearly defined methods of communication between various software components.
+
+in simple way
+API or Application interface is an interface to connect between backend and frontend
+
+* What need to know when build API
+API could use many protocols
+- http
+- soap
+- grpc
+
+and format
+- json
+- xml
+- using proto (igore this)
+
+we will learn using json and http protocol
+
+* API Standard
+Api standard is created so we could know what front end (backend users) needs
+
+*example*
+
+GET /all/todo will response
+.code code/resp_ex.json
+
+
+* Introduction to go
+.image images/header.png 50 1000
+lets see some code
+.play code/main.go
+
+* lets install it
+.iframe https://golang.org/doc/install 600 1000
+
+* Lets write simple api
+Some Text
+.play code/http.go
+

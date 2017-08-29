@@ -1,0 +1,114 @@
+Introduction to Backend
+pengenalan terhadap backend engineer
+28 Aug 2017
+
+Prima Adi
+Gopher
+prima101112@gmail.com
+http://primaadi.net
+
+Next : [[http://127.0.0.1:3999/introduction-2.slide#1][Api and go code]]
+
+* Back-End Technology: The Role of the Back-End Developer
+.image images/header.png 50 1000
+*what*is*backend*?*
+The back end is the machine that runs a site - the user doesn’t see it or directly interact with it as with client-side technology, but it’s always running in the background, delivering smooth functionality
+
+
+or you could say :
+_what_your_end_user_doesn’t_see_but_what_makes_the_site_run—is_called_the_ *back* *end.*
+
+
+*Consisting*of*behind-the-scenes*functionality*|*the*brain*of*a*site*
+
+- the server
+- the database
+- server-side application
+
+* Imagine Backend
+
+.image images/Back-end-dev-logo.png
+
+* What you must learn
+
+- programming language of course
+- database structure
+- connecting database 
+- CRUD to database
+- API (Application interface)
+- server side command
+
+* Other responsibilities of the back end can include
+
+- Database creation, integration, and management—e.g., MySQL, SQLite, PostgreSQL, and MongoDB. SQLite is lightweight and fast, making it a very popular alternative to a larger MySQL driver.
+- Using back-end frameworks to build server-side software, like Express.js or Beego (for golang)
+- Web Server technologies—e.g., Apache, Nginx (popular for static content, like images, HTML or CSS files)
+- Cloud computing integration—e.g., public cloud providers like Amazon Web Services, or private cloud environments
+- Server-side programming languages—like Python, Perl, Golang, PHP, Ruby, and JavaScript (Node.js).
+- Operating systems: Linux- and Unix-like operating systems, MacOS X, Windows Server
+
+* Other responsibilities of the back end can include (2)
+
+- Content management system (CMS) development, deployment, and maintenance
+- API integration
+- Security settings and hack prevents
+- Reporting—generating analytics and statistics like system reports of server load, number of visitors, geography of visitors, etc.
+- Backup and restore technologies for website’s files and DB.
+
+(source [[https://www.upwork.com/hiring/development/back-end-web-developer/][Upwork]])
+
+* Scripting language
+.image images/header.png 50 1000
+A scripting or script language is a programming language that supports scripts: programs written for a special run-time environment that automate the execution of tasks that could alternatively be executed one-by-one by a human operator. Scripting languages are often interpreted (rather than compiled).
+
+this is what wikipedia said
+- bash
+- lua
+- python
+- vb
+
+even php is scripting language
+
+* but
+.image images/script1.png 400 700
+
+so don't too serious, all language could be used to script or automate your jobs :)
+
+* example 
+let say you have jobs to create file with 10 lines inside it
+.code code/script2.py
+
+    python script2.py
+
+
+* Testing
+.image images/header.png 50 1000
+Software testing is a process of executing a program or application with the intent of finding the software bugs. It can also be stated as the process of validating and verifying that a software program or application or product: Meets the business and technical requirements that guided it's design and development.
+
+kind :
+- manual testing
+- automation testing
+
+* Testing Needs
+- Test Basis: It is the information needed in order to start the test analysis and create our Test Cases. Learn More
+- Test Case Specification:  A document described detailed summary of what scenarios will be tested, how they will be tested, how often they will be tested. Learn More
+- Test Scenario:  It is also called Test Condition or Test Possibility means any functionality that can be tested. Learn More
+- Test Case:  What is Test Case and Strategy to Write Good Test Case a documentation which specifies input, pre-conditions, set of execution steps and expected result. Learn More
+
+(source [[http://toolsqa.com/software-testing/software-testing-tutorial/][toolsqa]])
+
+* Scalability
+.image images/header.png 50 1000
+Scalability is the capability of a system, network, or process to handle a growing amount of work, or its potential to be enlarged to accommodate that growth.
+
+.image images/photodune-7225682-computer-network-xs.jpg
+
+* scale type
+- horisontal scale
+To scale horizontally (or scale out/in) means to add more nodes to (or remove nodes from) a system, such as adding a new computer to a distributed software application.
+
+- vertical scale
+To scale vertically (or scale up/down) means to add resources to (or remove resources from) a single node in a system, typically involving the addition of CPUs or memory to a single computer.
+
+.image images/vertical-scalability.png
+

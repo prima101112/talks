@@ -1,0 +1,10 @@
+[
+    {
+        "id": 1,
+        "todo" : "install golang"
+    },
+    {
+        "id": 2,
+        "todo" : "create app"
+    }
+]
