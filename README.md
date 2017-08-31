@@ -1,9 +1,11 @@
-# run with present
-For using `present` you should have Go installed on your machine 
-Check your Go installation with `go version` command
+# Presentation collection, run it with present
+For using `present` you should have Go installed on your machine.
+
+Check your Go installation with `go version` command.
 
 Install `present` with these command 
-`go get golang.org/x/tools/cmd/present`
+
+```go get golang.org/x/tools/cmd/present```
 
 Run `present` in working directory
 
