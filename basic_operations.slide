@@ -1,0 +1,62 @@
+Basic Operation - CRUD
+Backend Mentoring Session - Binar Academy
+31 Aug 2017
+
+Dwi Prihandi
+Rubyist, Gopher-wannabe, Elixir-enthusiast
+dwi@prihandi.com
+http://prihandi.com
+
+* Basic Operation on Backend Side
+Most of operation/action on backend are Create, Read, Update, and Delete data (persistent and non-persistent).
+
+As application grows additional computation and action might be injected to follow bussiness logic and requirement, such as :
+- Validation
+- Authentication/Authorization
+- Combined resources
+- Pagination
+- Search and filter
+- etc.
+
+* REST(ful) API and HTTP Verbs/Methods
+REpresentational State of Transfer
+
+HTTP Verbs/Methods :
+- HEAD
+- OPTIONS
+- GET
+- POST
+- PUT/PATCH
+- DELETE
+
+* DML
+Data Manipulation Language (SQL) :
+- SELECT
+- INSERT
+- UPDATE
+- DELETE
+
+* Backend Role
+Translate/bridge HTTP Request to DML and provide the results as HTTP Response
+
+Typical HTTP Method - DML pairs :
+- GET -> SELECT ( *show* for single resource, *index* for all resources )
+- POST -> CREATE 
+- PUT/PATCH -> UPDATE
+- DELETE -> DELETE
+
+* Some Concerns
+- URL/path are resource based and _typically_ on plural name/form i.e http://somedomain.com/*users*/:id
+- HTTP Method GET don't have request body, additional informations are passed as URL params i.e http://somedomain.com/users?*age_min=30*
+- Except Read for index, all operations are _typically_ for single resource identified by id/uuid
+- Some information can be added to Request Header
+
+* HTTP Status Code for Response
+- 2xx : yeay , Success
+- 3xx : Some action needed on Server side
+- 4xx : Client are wrong/faled
+- 5xx : Server are wrong/failed
+
+* Lets Code !
+Simple Go RESTful API with Gin, GORM and SQLite
+.play code/gin-crud.go /START OMIT/,/END OMIT/
