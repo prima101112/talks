@@ -1,26 +1,27 @@
 package main
 
 import (
-    	"log"
-    	"github.com/jinzhu/gorm"
-    	"github.com/gin-gonic/gin"
+	"github.com/gin-gonic/gin"
+	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/postgres"
+	"log"
+	"os"
 )
 
-type Person struct{
-        Name string `json:"name"`
+type Person struct {
+	Name     string `json:"name"`
 	Password string `json:"password"`
-	Phone string `json:"phone"`
-        Age int      `json:"age"`
+	Phone    string `json:"phone"`
+	Age      int    `json:"age"`
 }
 
-type LoginSuccess struct{
+type LoginSuccess struct {
 	Person Person `json:"person"`
-	Token string `json:"token"`
+	Token  string `json:"token"`
 }
 
-type Errorku struct{
-	Code string `json:"error_code"`
+type Errorku struct {
+	Code    string `json:"error_code"`
 	Message string `json:"message"`
 }
 
@@ -28,18 +29,25 @@ var db *gorm.DB
 
 func main() {
 	var err error
-	db, err = gorm.Open("postgres", "host=localhost user=prima dbname=binar sslmode=disable password=root")
+	//for heroku deploy
+	host := os.Getenv("DATABASE_URL")
+	if host != "" {
+		db, err = gorm.Open("postgres", host)
+	} else {
+		//local database
+		db, err = gorm.Open("postgres", "host=localhost user=prima dbname=binar sslmode=disable password=root")
+	}
 	db.AutoMigrate(Person{})
 	defer db.Close()
 	if err != nil {
 		log.Fatal("database error")
 	}
 
-        r := gin.Default()
-        r.GET("/person", GetPerson)
+	r := gin.Default()
+	r.GET("/person", GetPerson)
 	r.POST("/person", SetPerson)
 	r.POST("/login", Login)
-        r.Run() // listen and serve on 0.0.0.0:8080
+	r.Run() // listen and serve on 0.0.0.0:8080
 }
 
 func GetPerson(c *gin.Context) {
@@ -52,7 +60,7 @@ func GetPerson(c *gin.Context) {
 		db.Find(&persons)
 		log.Print(persons)
 		c.JSON(200, persons)
-	}else{
+	} else {
 		error.Code = "12343"
 		error.Message = "maaf salah token"
 		c.JSON(400, error)
@@ -77,7 +85,7 @@ func Login(c *gin.Context) {
 		s.Person = person
 		s.Token = "hgashjgd878yad9w"
 		c.JSON(200, s)
-	}else {
+	} else {
 		error.Code = "12343"
 		error.Message = "login salah"
 		c.JSON(400, error)
@@ -101,7 +109,7 @@ func SetPerson(c *gin.Context) {
 			log.Print(person)
 			c.JSON(200, person)
 		}
-	}else{
+	} else {
 		error.Code = "12343"
 		error.Message = "maaf salah token"
 		c.JSON(400, error)
