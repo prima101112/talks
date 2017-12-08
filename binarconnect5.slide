@@ -56,10 +56,11 @@ to see coverage
 
 * Test Table
 
-yah unit testing hanya 1 kondisi akan sulit memvalidasi 
+menulis unit testing hanya 1 kondisi akan sulit memvalidasi
 apakah sebuah function berjalan dengan benar?
 
 kadang perlu kita membuat lebih dari 1 TestCase
+untuk itu ada teknik menggunakan test table
 
 * Test Table code
 .code code/src/unittesting/maintable_test.go
