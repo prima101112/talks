@@ -47,6 +47,13 @@ Apa aja yang di butuhkan
 - gunakan `t.Error` atau `t.Fatal`, t adalah `*Testing.T`
 - selalu simpan dengan blabla_test.go
 
+* Running test
+just test
+- go test ./..
+
+to see coverage
+- go test ./.. -cover 
+
 * Test Table
 
 yah unit testing hanya 1 kondisi akan sulit memvalidasi 
