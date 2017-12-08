@@ -1,0 +1,71 @@
+Binar Connect 5
+Unit Testing in go, worth it?   
+08 Nov 2017
+
+Prima Adi
+Tokopedia, Gopher
+prima101112@gmail.com
+http://primaadi.net
+
+* Question
+- What is unit test ?
+- how unit test in go ?
+- worth it ?
+
+* What is Unit Testing
+Unit test adalah software testing paling dasar dalam pembuatan software
+.image images/unittesting1.jpg
+
+*kenapa* *dibahas*
+
+- somehow its little bit important
+
+* Why Unit Testing
+
+- memvalidasi ke stabilan software
+- go to zerobug software (wanna be zerobug)
+- melatih kesabaran
+
+*Biasanya*
+
+- unit test itu terisolasi (helper function)
+- unit test tidak ada hubunganya dengan network atau external
+- if you want to test http or database conn its integration testing (exept u use mocking)
+
+* Unit Testing in Go
+
+example code that we want to test
+.play code/src/unittesting/main.go
+
+* Write Testing
+.code code/src/unittesting/main_test.go
+
+Apa aja yang di butuhkan
+
+- Buat function yang menerima `*Testing.T`
+- Selalu awali prefix `Test*` misal `TestTimes`
+- gunakan `t.Error` atau `t.Fatal`, t adalah `*Testing.T`
+- selalu simpan dengan blabla_test.go
+
+* Test Table
+
+yah unit testing hanya 1 kondisi akan sulit memvalidasi 
+apakah sebuah function berjalan dengan benar?
+
+kadang perlu kita membuat lebih dari 1 TestCase
+
+* Test Table code
+.code code/src/unittesting/maintable_test.go
+
+* Worth it
+Unit test sangatlah penting dalam software yang besar dan di maintain banyak orang. 
+sehingga jika kita bekerja di suatu perusahaan besar yang sangat banyak orang berkontribusi pada hal yang sama
+maka unit testing sangat sepdan.
+
+jika anda bekerja sendiri dan sangat dikejar deadline (old fashioned way of developing) unit test bisa sedikit di abaikan 
+apa lagi jika client minta aplikasi seperti gojek hanya dalam waktu 1 bulan.
+
+* start it and learn it
+
+.image images/unittesting2.webp
+
